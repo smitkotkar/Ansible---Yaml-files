@@ -1,0 +1,13 @@
+---
+- name: variable example
+  hosts: all
+  vars:
+     URL: "smitkotkar42@gmail.com"
+  tasks:
+    - name: print URL
+      debug:
+        msg: "{{URL}}"
+    - name: Print another URL
+      debug:
+        msg: "{{URL}}"
+...
