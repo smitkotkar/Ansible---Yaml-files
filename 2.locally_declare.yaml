@@ -4,9 +4,6 @@
   vars:
      URL: "smitkotkar42@gmail.com"
   tasks:
-    - name: print URL
-      debug:
-        msg: "{{URL}}"
     - name: locally declare
       debug:
         msg: "{{URL}}"
