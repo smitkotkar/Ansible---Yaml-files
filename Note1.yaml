@@ -1,0 +1,8 @@
+---
+- name: My first playbook
+  hosts: all
+  tasks:
+    - name: What is RDS
+      debug:
+      msg: "Amazon Relational Database Service (RDS) is a managed SQL database service provided by Amazon Web Services (AWS). " 
+...

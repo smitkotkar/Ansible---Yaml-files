@@ -2,7 +2,7 @@
 - name: variable example
   hosts: all
   vars:
-     URL: "smitkotkar42@gmail.com"
+     URL: "smitkotkar.com"
   tasks:
     - name: print URL
       debug:
