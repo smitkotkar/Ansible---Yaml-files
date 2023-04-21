@@ -1,0 +1,21 @@
+---
+- name: loop example
+  hosts: all
+  tasks:
+    - name: print fruit list
+      debug:
+        msg:"{{item}}"
+      loop:
+        - Banana
+        - Mango
+        - Apple
+    - name: install git wget httpd vim nginx packages
+      yum: 
+        name: "{{item}}"
+        state: latest
+      loop:
+        - git 
+        - wget
+        - httpd
+        - vim
+        - nginx

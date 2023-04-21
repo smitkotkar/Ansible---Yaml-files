@@ -1,0 +1,10 @@
+---
+- name: setfact playbook
+  hosts: all
+  tasks:
+    - name: set facl
+      set_facl:
+        os: "RedHat"
+    - name: print
+      debug:
+        msg: "{{os}}"

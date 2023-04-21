@@ -1,0 +1,14 @@
+---
+- name: gathering facts
+  hosts: all
+  tasks:
+    - name: print OS
+      debug:
+        msg: "{{ansible_distribution}}"
+
+        x
+        
+    - name: print OS
+      debug:
+        msg: "{{ansible_default_IPv4.address}}"
+...

@@ -1,0 +1,16 @@
+---
+- name: condition example
+  hosts: all
+  tasks:
+    - name: print centos
+      debug:
+        msg: "Hi this is centos"
+      when: ansible_distribution == "centos"
+    - name: print UBUNTU
+      debug: 
+        msg: "Welcome this UBUNTU"
+      when: ansible_distribution == "ubuntu"
+    - name: print amazon
+      debug: 
+        msg: "Welcome to amazon"
+      when: ansible_distribution == "amazon"

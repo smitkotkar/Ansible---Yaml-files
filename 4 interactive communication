@@ -1,0 +1,19 @@
+---
+- name: variable example
+  hosts: all
+  vars:
+     URL: "CBZ.google.com"
+#  vars_files:
+#    - ./variable.txt
+  vars_prompt:
+  - name: URL
+    prompt: Please enter URL
+    Private: false
+  tasks:
+  - name: Print url
+    debug:
+      msg: "{{URL}}"
+  - name: Print 2nd url
+    debug:
+      msg: "{{URL}}"
+...

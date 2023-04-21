@@ -1,0 +1,13 @@
+---
+- name: condition example
+  hosts: all
+  tasks:
+    - name: print centos
+      debug:
+        msg: "Hi this is centos"
+    - name: print UBUNTU
+      debug: 
+        msg: "Welcome this UBUNTU"
+    - name: print amazon
+      debug: 
+        msg: "Welcome to amazon"

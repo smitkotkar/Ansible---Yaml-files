@@ -1,0 +1,15 @@
+---
+- name: register demo
+  hosts: all 
+  tasks:
+    - name: get hostname
+       shell:
+        arg: hostname
+
+    - name:
+       shell: hostname
+        register: URL
+    - name: Print hostname 
+       debug:
+        msg: "{{URL}}"
+...

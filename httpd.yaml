@@ -1,0 +1,9 @@
+---
+- name: httpd is there
+  hosts: centos
+  tasks:
+    - name: ensure httpd is installed
+      yum:
+        name: httpd
+        state: latest
+         

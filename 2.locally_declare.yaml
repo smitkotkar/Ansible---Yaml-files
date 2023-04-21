@@ -9,10 +9,10 @@
         msg: "{{URL}}"
       vars:
         URL: "google.com"
-    - name: Print another URL
+    - name: globally declare
       debug:
         msg: "{{URL}}"
-    - name: Smit Kotkar
+    - name: Smit Kotkar (locally declare)
       debug: 
         msg: "{{URL}}"
       vars:
