@@ -4,7 +4,7 @@
   become: True
   tasks:
     - name: install web package
-      yum:
+      package:
         name: httpd
         state: latest
     - name: start httpd
@@ -13,7 +13,7 @@
         state: started
 
     - name: install web package
-      yum:
+      package:
         name: httpd
         state: latest
     - name: start httpd
