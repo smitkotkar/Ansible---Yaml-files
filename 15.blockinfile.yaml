@@ -1,6 +1,7 @@
 ---
 - name: block in file
   hosts: all
+  become: True
   tasks:
     - name: blockinfile 
       path: /var/www/html/index.html
@@ -9,5 +10,3 @@
         <h2> Good Morning </h2>
         <h3> How are you </h3>
 ...
-
-xxxx

@@ -6,7 +6,6 @@
     - name: replace line 
       lineinfile:
             path: /var/www/html/index.html
-            regexp: <h1> Hello Smit Kotkar Good Morning </h1>
-            line: "This is Ansible DevOps Practice"
-            state: present
+            regexp: '^<h1> Hello Smit Kotkar Good Morning </h1>'
+            line: "<h1> This is Ansible DevOps Practice </h1>"
 ...
