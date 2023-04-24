@@ -4,12 +4,12 @@
   become: True
   tasks:
     - name: Install web package
-      package:
+      yum:
         name: httpd
         state: latest
       when: anisble_os_family == "RedHat"
     - name: Install Web package
-      Package:
+      yum:
         name: httpd
         state: latest
       when: ansible_os_family == "RedHat"
