@@ -1,0 +1,26 @@
+---
+- name: My web server
+  hosts: all
+  become: True
+  tasks:
+    - name: Install web package
+      package:
+        name: httpd
+        state: latest
+      when: anisble_os_family == "RedHat"
+    - name: Install Web package
+      Package:
+        name: httpd
+        state: latest
+      when: ansible_os_family == "RedHat"
+    - name: start httpd
+      systemd:
+        name: httpd
+        state: started
+      when: ansible_os_family == "RedHat"
+    - name: start apache2
+      systemd:
+        name: httpd
+        state: started
+      when: ansible_os_family == "RedHat"
+...
