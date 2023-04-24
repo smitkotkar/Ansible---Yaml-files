@@ -3,24 +3,23 @@
   hosts: all
   become: True
   tasks:
-    - name: Install web package
+    - name: install web package
       yum:
         name: httpd
         state: latest
-   
-    - name: Install Web package
-      yum:
-        name: httpd
-        state: latest
- 
     - name: start httpd
       systemd:
         name: httpd
         state: started
 
-    - name: start apache2
+    - name: install web package
+      yum:
+        name: httpd
+        state: latest
+    - name: start httpd
       systemd:
         name: httpd
         state: started
+
 
 ...
