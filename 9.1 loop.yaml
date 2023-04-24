@@ -18,4 +18,5 @@
         - wget
         - httpd
         - vim
+        - epel-release
         - nginx

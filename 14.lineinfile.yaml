@@ -1,0 +1,14 @@
+---
+- name: lineinfile Examples
+  hosts: all
+  tasks:
+    - name: line in file
+      lineinfile:
+        path: /var/www/html/index.html
+        regexp: '^ <h1>'
+        line: 'This is Ansible DevOps practice'
+...
+
+
+
+xxxx

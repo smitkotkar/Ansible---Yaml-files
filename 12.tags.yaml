@@ -1,0 +1,26 @@
+---
+- name: Examples for tags
+  hosts: all
+  tasks:
+    - name: task1
+      debug: 
+        msg: "Hello World"
+      tags: tasks1
+    
+    - name: task2
+      debug: 
+        msg:
+      tags: "This is Smit Kotkar"
+        - demo
+        - task2
+...
+
+
+
+...
+#ansible-playbook -u centos --private-key=california.pem 12.tags.yaml
+#ansible-playbook -u centos --private-key=california.pem --tags task1 12.tags.yaml
+#ansible-playbook -u centos --private-key=california.pem --tags task2 12.tags.yaml
+#ansible-playbook -u centos --private-key=california.pem --skip-tags task1 12.tags.yaml
+#ansible-playbook -u centos --private-key=california.pem --list-tags task1 12.tags.yaml
+...

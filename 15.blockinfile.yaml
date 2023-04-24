@@ -1,0 +1,13 @@
+---
+- name: block in file
+  hosts: all
+  tasks:
+    - name: blockinfile 
+      path: /var/www/html/index.html
+      block: |
+        <h1> Hello smit kotkar </h1>
+        <h2> Good Morning </h2>
+        <h3> How are you </h3>
+...
+
+xxxx

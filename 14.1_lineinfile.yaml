@@ -1,0 +1,11 @@
+---
+- name: lineinfile Examples
+  hosts: all
+  tasks:
+    - name: line in file
+      lineinfile:
+        dest: /var/www/html/index.html
+        line: 'This is Ansible DevOps practice'
+        state: present
+        create: True
+... 

@@ -1,0 +1,11 @@
+---
+- name: setfact
+  hosts: all
+  become: True
+  tasks:
+    - name: add line 
+      lineinfile:
+            path: /var/www/html/index.html
+            line: "This is Ansible DevOps Practice"
+            state: present
+...
