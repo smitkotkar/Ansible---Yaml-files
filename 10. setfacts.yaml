@@ -2,8 +2,8 @@
 - name: setfact playbook
   hosts: all
   tasks:
-    - name: set facl
-      set_facl:
+    - name: set fact
+      set_fact:
         os: "RedHat"
     - name: print
       debug:
