@@ -1,27 +1,29 @@
 ---
 - name: My web server
   hosts: all
+  become: True
   tasks:
     - name: Install web package
       package:
         name: httpd
         state: latest
-      when: anisble_os_family=="RedHat"
+      when: anisble_os_family == "RedHat"
     
     - name: Install Web package
       Package:
         name: apache2
         state: latest
-      when: ansible_os_family=="Debian"
+      when: ansible_os_family == "Debian"
     
     - name: start httpd
       systemd:
         name: httpd
         state: started
-      when: ansible_os_family=="RedHat"
+      when: ansible_os_family == "RedHat"
     
     - name: start apache2
       systemd:
         name: apache2
         state: started
-      when: ansible_os_family=="Debian"
+      when: ansible_os_family == "Debian"
+...
