@@ -1,5 +1,4 @@
 - name: web-server-role
   hosts: all
-  become: True
   roles: 
    - web-server-role
