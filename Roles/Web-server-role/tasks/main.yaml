@@ -1,7 +1,7 @@
 - name: install httpd
   package:
     name: "{{PKG}}"
-    state: present
+    state: latest
 - name: deploy application
   copy:
     src: index.html
@@ -10,4 +10,4 @@
   systemd:
     name: "{{PKG}}"
     state: started
-    enable: true
+    enabled: True
