@@ -5,7 +5,7 @@
   tasks:
     - name: replace line 
       lineinfile:
-            name: /var/www/html/index.html
+            path: /var/www/html/index.html
             regexp: '^<h1> Hello Smit Kotkar Good Morning </h1>'
-            line: "<h1> This is Ansible DevOps Practice </h1>"
+            line: "<h1> Hello World </h1>"
 ...
