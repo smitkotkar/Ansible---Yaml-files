@@ -1,5 +1,5 @@
-- name: Web-server-role
+- name: web-server-role
   hosts: all
   become: ture
   roles: 
-    - Web-server-role
+    - web-server-role
