@@ -10,7 +10,7 @@
     - name: task2
       debug: 
         msg:
-      tags: "This is Smit Kotkar"
+      tags:
         - demo
         - task2
 ...
