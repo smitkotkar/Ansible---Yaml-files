@@ -4,7 +4,7 @@
   become: True
   tasks:
     - name: Install httpd
-      package:
+      Package:
         name: httpd
         state: latest
       when: anisble_os_family == "RedHat"
