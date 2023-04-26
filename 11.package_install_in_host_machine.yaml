@@ -7,7 +7,7 @@
       Package:
         name: httpd
         state: latest
-      when: anisble_os_family == "RedHat"
+      when: ansible_os_family == "RedHat"
     - name: Install apache2
       Package:
         name: apache2
