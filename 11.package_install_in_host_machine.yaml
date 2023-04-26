@@ -3,12 +3,12 @@
   hosts: all
   become: True
   tasks:
-    - name: Install web package
+    - name: Install httpd
       package:
         name: httpd
         state: latest
       when: anisble_os_family == "RedHat"
-    - name: Install Web package
+    - name: Install apache2
       Package:
         name: apache2
         state: latest
