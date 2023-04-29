@@ -6,6 +6,6 @@
     - name: replace line 
       lineinfile:
             path: /var/www/html/index.html
-            regexp: "^<h1> Hello Smit Kotkar Good Morning </h1>"
+            regexp: "^<h1> Hello World </h1>"
             line: "<h1> Hello World is changed </h1>"
 ...
